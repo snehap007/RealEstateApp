@@ -1,0 +1,193 @@
+
+/* Welcome Area css
+============================================================================================ */
+.welcome_area{
+	padding-top: 150px;
+}
+.welcome_inner{
+	.welcome_img{
+		box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+		display: inline-block;
+		img{
+			margin-top: 0px;
+		}
+	}
+}
+.welcome_text{
+	h4{
+		color: $dip;
+		font-family: $rob;
+		font-size: 36px;
+		margin-bottom: 18px;
+	}
+	p{
+		max-width: 495px;
+		line-height: 24px;
+		font-family: $rob;
+		font-size: 14px;
+		font-weight: normal;
+		margin-bottom: 40px;
+	}
+}
+.wel_item{
+	border: 1px solid #eeeeee;
+	padding: 30px 25px;
+	i{
+		font-size: 24px;
+		color: $baseColor;
+	}
+	h4{
+		font-size: 24px;
+		font-family: $rob;
+		font-weight: 600;
+		color: $dip;
+		margin-bottom: 5px;
+		margin-top: 10px;
+	}
+	p{
+		font-size: 14px;
+		font-family: $rob;
+		color: $pfont;
+		margin-bottom: 0px;
+	}
+}
+/* End Welcome Area css
+============================================================================================ */
+
+/* End Welcome Area css
+============================================================================================ */
+.properties_area{
+	padding-bottom: 120px;
+}
+.properties_inner{
+	
+}
+.properties_item{
+	box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	.pp_img{
+		
+	}
+	.pp_content{
+		padding: 30px;
+		h4{
+			font-size: 18px;
+			font-family: $rob;
+			font-weight: 500;
+			color: $dip;
+			margin-bottom: 15px;
+		}
+		.tags{
+			margin-right: -6px;
+			overflow: hidden;
+			margin-bottom: 20px;
+			a{
+				display: inline-block;
+				margin-right: 6px;
+				margin-bottom: 10px;
+				padding: 0px 20px;
+				line-height: 34px;
+				border: 1px solid #eeeeee;
+				border-radius: 3px;
+				background: #f9f9ff;
+				font-size: 14px;
+				color: $pfont;
+				font-family: $rob;
+				border-radius: 5px;
+				i{
+					padding-right: 7px;
+					&.fa-check{
+						color: #1fe111;
+					}
+					&.fa-times{
+						color: $baseColor;
+					}
+				}
+			}
+		}
+		.pp_footer{
+			overflow: hidden;
+			h5{
+				display: inline-block;
+				font-weight: 500;
+				font-family: $rob;
+				font-size: 18px;
+				color: $dip;
+				position: relative;
+				top: 9px;
+			}
+			.main_btn{
+				float: right;
+				padding: 0px 32px;
+				line-height: 40px;
+			}
+		}
+	}
+}
+/* End Welcome Area css
+============================================================================================ */
+
+/* Cities Area css
+============================================================================================ */
+.cities_area{
+	
+}
+.cities_inner{
+	
+}
+.cities_item{
+	position: relative;
+	.main_btn2{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+		&:hover{
+			background: #fff;
+			border-color: #fff;
+		}
+	}
+}
+/* End Cities Area css
+============================================================================================ */
+
+/* Feature Area css
+============================================================================================ */
+.feature_area{
+	background: #f9f9ff;
+}
+.feature_inner{
+	margin-bottom: -30px;
+}
+.feature_item{
+	background: #fff;
+	border-radius: 10px;
+	padding: 40px 60px 40px 40px;
+	margin-bottom: 30px;
+	@include transition;
+	h4{
+		font-size: 18px;
+		font-family: $rob;
+		font-weight: 500;
+		color: $dip;
+		margin-bottom: 20px;
+		i{
+			font-size: 24px;
+			padding-right: 15px;
+			position: relative;
+			top: 4px;
+		}
+	}
+	p{
+		margin-bottom: 0px;
+	}
+	&:hover{
+		background: $baseColor;
+		color: #fff;
+		h4{
+			color: #fff;
+		}
+	}
+}
+/* End Feature Area css
+============================================================================================ */

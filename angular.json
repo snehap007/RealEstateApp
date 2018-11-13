@@ -27,18 +27,39 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/bootstrap.css",
+              "src/assets/vendors/linericon/style.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/vendors/lightbox/simpleLightbox.css",
+              "src/assets/vendors/nice-select/css/nice-select.css",
+              "src/assets/vendors/animate-css/animate.css",
+              "src/assets/vendors/jquery-ui/jquery-ui.css",
+              "src/assets/css/style.css",
+              "src/assets/css/responsive.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.2.1.min.js",
+              "src/assets/js/popper.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/stellar.js",
+              "src/assets/vendors/lightbox/simpleLightbox.min.js",
+              "src/assets/vendors/nice-select/js/jquery.nice-select.min.js",
+              "src/assets/vendors/isotope/imagesloaded.pkgd.min.js",
+              "src/assets/vendors/isotope/isotope-min.js",
+              "src/assets/vendors/owl-carousel/owl.carousel.min.js",
+              "src/assets/vendors/jquery-ui/jquery-ui.js",
+              "src/assets/js/jquery.ajaxchimp.min.js",
+              "src/assets/js/mail-script.js",
+              "src/assets/js/theme.js"
+            ]
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "src/environments/environment.ts",
+                "with": "src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -48,13 +69,11 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
+              "budgets": [{
+                "type": "initial",
+                "maximumWarning": "2mb",
+                "maximumError": "5mb"
+              }]
             }
           }
         },

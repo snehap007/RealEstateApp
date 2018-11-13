@@ -1,0 +1,83 @@
+/* Testimonials Area css
+============================================================================================ */
+.testimonials_area{
+	background: linear-gradient( rgba(0, 0, 0, 0.75) 100%, rgba(0, 0, 0, 0.75)100%),url("../img/testimonials/testi-bg.jpg") no-repeat scroll center center;
+	background-size: cover;
+}
+.testimonials_inner{
+	.testi_left_text{
+		max-width: 335px;
+		margin-top: 100px;
+		h4{
+			font-size: 36px;
+			color: #fff;
+			font-weight: 500;
+			padding-right: 20px;
+			margin-bottom: 20px;
+		}
+		p{
+			color: #999999;
+			line-height: 24px;
+			font-size: 14px;
+		}
+	}
+}
+.testi_slider{
+	.owl-dots{
+		text-align: center;
+		position: absolute;
+		right: -65px;
+		top: 50%;
+		transform: translateY(-50%);
+		.owl-dot{
+			height: 14px;
+			width: 14px;
+			background: #eeeeee;
+			display: block;
+			margin-bottom: 10px;
+			&:last-child{
+				margin-right: 0px;
+			}
+			&.active{
+				background: $baseColor;
+			}
+		}
+	}
+}
+.testi_item{
+	background: rgba(255, 255, 255, .10);
+	text-align: center;
+	padding: 45px 30px;
+	border-radius: 10px;
+	border: 1px solid #544e50;
+	img{
+		width: auto !important;
+		margin: auto;
+		margin-bottom: 25px;
+	}
+	p{
+		line-height: 24px;
+		color: #999;
+		font-family: $rob;
+		margin-bottom: 25px;
+	}
+	h4{
+		font-size: 18px;
+		color: #fff;
+		font-family: $rob;
+		font-weight: 600;
+		margin-bottom: 5px;
+		@include transition;
+		&:hover{
+			color: $baseColor;
+		}
+	}
+	h6{
+		line-height: 24px;
+		color: #999999;
+		font-family: $rob;
+		font-size: 14px;
+	}
+}
+/* End Testimonials Area css
+============================================================================================ */

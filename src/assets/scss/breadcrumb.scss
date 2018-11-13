@@ -1,0 +1,302 @@
+/* Home Banner Area css
+============================================================================================ */
+.home_banner_area{
+	position: relative;
+	z-index: 1;
+	min-height: 754px;
+	margin-bottom: 140px;
+	.banner_inner{
+		position: relative;
+		min-height: 754px;
+		background: url(../img/banner/home-banner.jpg) no-repeat scroll center center;
+		.banner_content{
+			color: $dip;
+			h5{
+				font-size: 14px;
+				font-family: $rob;
+				letter-spacing: 1.4px;
+				text-transform: uppercase;
+				margin-bottom: 0px;
+			}
+			h3{
+				color: $dip;
+				font-size: 48px;
+				font-weight: bold;
+				font-family: $rob;
+				margin-bottom: 30px;
+				margin-top: 7px;
+			}
+		}
+	}	
+}
+
+.advanced_search{
+	background: #fff;
+	max-width: 360px;
+	border-radius: 10px;
+	overflow: hidden;
+	float: right;
+	margin-top: -472px;
+	width: 100%;
+	padding: 45px 30px;
+	text-align: center;
+	box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+	position: relative;
+	h3{
+		font-size: 18px;
+		font-weight: 500;
+		color: $dip;
+		font-family: $rob;
+		margin-bottom: 25px;
+	}
+	.search_select{
+		display: block;
+		width: 100%;
+		clear: both;
+		.s_select{
+			width: 100%;
+			border: 1px solid #eeeeee;
+			border-radius: 0px;
+			margin-bottom: 10px;
+			background: #f9f9ff;
+			padding-left: 19px;
+			&:last-child{
+				margin-bottom: 0px;
+			}
+			&:after{
+				content: "\f0d7";
+				font: normal normal normal 14px/1 FontAwesome;
+				transform: rotate(0deg);
+				border: none;
+				font-size: 13px;
+				color: $pfont;
+				margin-top: -5px;
+				right: 22px;
+			}
+			.current{
+				font-size: 13px;
+				font-family: $rob;
+				color: #aaaaaa;
+				font-weight: 300;
+			}
+			.list{
+				width: 100%;
+				border-radius: 0px;
+				li{
+					font-size: 13px;
+					font-family: $rob;
+					color: #aaaaaa;
+					font-weight: 300;
+				}
+			}
+		}
+	}
+	.search_range{
+		display: block;
+		position: relative;
+		clear: both;
+		text-align: left;
+		padding-top: 16px;
+		.range_item{
+			h5{
+				font-size: 13px;
+				font-family: $rob;
+				font-weight: 300;
+				color: $pfont;
+				margin-bottom: 10px;
+			}
+			#slider-range, #slider-range2{
+				border: none;
+				background: #eeeeee;
+				border-radius: 0px;
+				height: 5px;
+				margin-bottom: 10px;
+				.ui-slider-range{
+					background: $baseColor;
+					border-radius: 0px;
+				}
+				.ui-slider-handle{
+					border-radius: 0px;
+					border: none;
+					height: 15px;
+					width: 5px;
+					background: $baseColor;
+					margin: 0px;
+					right: 5px;
+					top: -5px;
+					outline: none;
+					box-shadow: none;
+					cursor: pointer;
+				}
+			}
+			.d_text{
+				font-size: 11px;
+				font-family: $rob;
+				font-weight: 300;
+				color: #aaaaaa;
+				padding-right: 16px;
+				margin-top: 10px; 
+			}
+			.d_text2{
+				font-size: 11px;
+				font-family: $rob;
+				font-weight: 300;
+				color: #aaaaaa;
+				padding-right: 8px;
+			}
+			.amount{
+				max-width: 256px;
+				width: 100%;
+				display: inline-block;
+				overflow: hidden;
+				font-size: 11px;
+				font-family: $rob;
+				font-weight: 300;
+				color: #aaaaaa;
+				@include placeholder{
+					font-size: 11px;
+					font-family: $rob;
+					font-weight: 300;
+					color: #aaaaaa;
+				}
+			}
+			.amount2{
+				max-width: 253px;
+				width: 100%;
+				display: inline-block;
+				overflow: hidden;
+				font-size: 11px;
+				font-family: $rob;
+				font-weight: 300;
+				color: #aaaaaa;
+				@include placeholder{
+					font-size: 11px;
+					font-family: $rob;
+					font-weight: 300;
+					color: #aaaaaa;
+				}
+			}
+			&:last-child{
+				margin-top: 16px;
+			}
+		}
+	}
+	.submit_btn{
+		margin-top: 33px;
+	}
+}
+
+.blog_banner{
+	min-height: 780px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	margin-bottom: 0px;
+	.banner_inner{
+		background: #04091e;
+		position: relative; 
+		overflow: hidden;
+		width: 100%;
+		min-height: 780px;
+		z-index: 1;
+		.overlay{
+			background: url(../img/banner/banner-2.jpg) no-repeat scroll center center;
+			opacity: .5;
+			height: 125%;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			z-index: -1;
+		}
+		.blog_b_text{
+			max-width: 700px;
+			margin: auto;
+			color: #fff;
+			margin-top: 80px;
+			h2{
+				font-size: 60px;
+				font-weight: 500;
+				font-family: $rob;
+				line-height: 66px;
+				margin-bottom: 15px;
+			}
+			p{
+				font-size: 16px;
+				margin-bottom: 35px;
+			}
+			.white_bg_btn{
+				line-height: 42px;
+				padding: 0px 45px;
+			}
+		}
+	}
+}
+
+.banner_box{
+	max-width: 1620px;
+	margin: auto;
+}
+.banner_area{
+	position: relative;
+	z-index: 1;
+	min-height: 300px;
+	.banner_inner{
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		min-height: 300px;
+		background: #000;
+		z-index: 1;
+		.overlay{
+			background: url(../img/banner/banner.jpg) no-repeat scroll center center;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 125%;
+			bottom: 0;
+			z-index: -1;
+			opacity: 1;
+		}
+		.banner_content{
+			h2{
+				color: $dip;
+				font-size: 48px;
+				font-family: $rob;
+				margin-bottom: 0px;
+				font-weight: 500;
+			}
+			.page_link{
+				a{
+					font-size: 14px;
+					color: $dip;
+					font-family: $rob;
+					margin-right: 32px;
+					position: relative;
+					text-transform: uppercase;
+					&:before{
+						content: "\f0da";
+						font: normal normal normal 14px/1 FontAwesome; 
+						position: absolute;
+						right: -25px;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+					&:last-child{
+						margin-right: 0px;
+						&:before{
+							display: none;
+						}	
+					}
+					&:hover{
+						color: $baseColor;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* End Home Banner Area css
+============================================================================================ */
