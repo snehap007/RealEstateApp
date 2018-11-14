@@ -1,0 +1,12 @@
+$headerBackground : #fff;
+
+.header_area {
+    background-color: $headerBackground;
+    position: fixed;
+}
+
+.nav-item{
+    a {
+        cursor: pointer;
+    }
+}
