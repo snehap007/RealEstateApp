@@ -4,12 +4,13 @@ import { LandingComponent } from './landing/landing.component';
 import { LayoutComponent } from './layout.component';
 import { CoreModule } from '../core/core.module';
 import {RouterModule} from '@angular/router';
+import { AboutUSComponent } from './about-us/about-us.component';
 @NgModule({
   imports: [
     CommonModule,
     CoreModule,
     RouterModule
   ],
-  declarations: [LandingComponent, LayoutComponent]
+  declarations: [LandingComponent, LayoutComponent, AboutUSComponent]
 })
 export class LayoutModule { }

@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
           <ul class="nav navbar-nav menu_nav ml-auto">
             <li class="nav-item active"><a class="nav-link">Home</a></li>
-            <li class="nav-item"><a class="nav-link">About</a></li>
+            <li class="nav-item" (click)="NavigateToAboutUS()"><a class="nav-link">About</a></li>
             <li class="nav-item"><a class="nav-link">Properties</a></li>
             <li class="nav-item"><a class="nav-link">Team</a></li>
             <li class="nav-item submenu dropdown">
@@ -32,11 +32,11 @@
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link">Contact</a></li>
-            <li class="nav-item"><a class="nav-link">Login</a></li>
+            <li class="nav-item" (click)="NavigateToLogin()"><a class="nav-link">Login</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
+          <!-- <ul class="nav navbar-nav navbar-right">
             <li class="nav-item"><a class="search"><i class="lnr lnr-magnifier"></i></a></li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </nav>

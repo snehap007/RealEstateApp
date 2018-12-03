@@ -51,7 +51,8 @@
               "src/assets/vendors/jquery-ui/jquery-ui.js",
               "src/assets/js/jquery.ajaxchimp.min.js",
               "src/assets/js/mail-script.js",
-              "src/assets/js/theme.js"
+              "src/assets/js/theme.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
