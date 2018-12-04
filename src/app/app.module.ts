@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
 import { LayoutModule } from './layout/layout.module';
-import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
-import {HttpModule} from '@angular/http';
-
+import { HttpModule } from '@angular/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent
@@ -20,7 +20,9 @@ import {HttpModule} from '@angular/http';
     LayoutModule,
     AuthModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

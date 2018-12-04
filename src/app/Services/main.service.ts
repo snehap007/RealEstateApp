@@ -3,12 +3,14 @@ import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { Http, RequestOptions, Headers } from '@angular/http';
 import { environment } from '../../environments/environment';
+
+import { ToastrService } from 'ngx-toastr';
 @Injectable({
   providedIn: 'root'
 })
 export class MainService {
   Base_URL: any;
-  constructor(private http: Http) {
+  constructor(private http: Http, private toaster: ToastrService) {
     this.Base_URL = environment.Base_URL;
   }
 
@@ -29,8 +31,8 @@ export class MainService {
       var options = new RequestOptions({ headers: header });
       return this.http.post(this.Base_URL + ApiName, RequestBody, options).
         pipe(
-        map(this.extractData),
-        catchError(this.HandleError)
+          map(this.extractData),
+          catchError(this.HandleError)
         );
     }
     else {
@@ -38,7 +40,7 @@ export class MainService {
     }
   }
 
-  HandleError(error:any) {
+  HandleError(error: any) {
     // 401 - unAuthorized
     if (error.status === 401) {
       return throwError(new Error(error.status));
@@ -68,40 +70,44 @@ export class MainService {
     }
   }
 
+  showToaster(tag: any, message: any) {
+    console.log(message);
+    if (tag === 'Error') {
+      this.toaster.error('Error', message);
+    } else if (tag === 'Success') {
+      this.toaster.success('Success', message);
+    } else if (tag === 'Info') {
+      this.toaster.info('Info', message);
+    } else if (tag === 'Warn') {
+      this.toaster.warning('Warning', message);
+    }
+  }
+
   extractData(res) {
     if (res.status === 200) {
-      let body = res.json();
+      const body = res.json();
       return body;
-    }
-    else {
+    } else {
       return {};
     }
   }
 
   HandleErrorMessages(err) {
-    if (err.message == '401') {
-      var message = "You are unauthorized to access the requested resource. Please log in!";
-      // this.toastr.error('Error', message);
+    let Message = '';
+    if (err.message === '401') {
+      Message = 'You are unauthorized to access the requested resource. Please log in!';
+      this.showToaster('Error', Message);
+    } else if (err.message === '400') {
+      Message = 'Invalid syntax for this request was provided!';
+    } else if (err.message === '404') {
+      Message = 'We could not find the resource you requested!';
+    } else if (err.message === '409') {
+      Message = 'The request could not be completed due to a conflict with the current state of the resource!';
+    } else if (err.message === '408') {
+      Message = 'Request time out please try again!';
+    } else {
+      Message = 'Oops! Something went wrong';
     }
-    else if (err.message == '400') {
-      var message = "Invalid syntax for this request was provided!";
-      // this.toastr.error('Error', message);
-    }
-    else if (err.message == '404') {
-      var message = "We could not find the resource you requested!";
-      // this.toastr.error('Error', message);
-    }
-    else if (err.message == '409') {
-      var message = "The request could not be completed due to a conflict with the current state of the resource!";
-      // this.toastr.error('Error', message);
-    }
-    else if (err.message == '408') {
-      var message = "Request time out please try again!";
-      // this.toastr.error('Error', message);
-    }
-    else {
-      var message = "Oops! Something went wrong";
-      // this.toastr.error('Error', message);
-    }
+    this.showToaster('Error', Message);
   }
 }

@@ -14,16 +14,24 @@ export class LoginComponent implements OnInit {
   }
 
   submitForm(UserDetails: any) {
-    var body = UserDetails;
+    const body = UserDetails;
     console.log(body);
     this.mainservice.PostRequest('SignIn', body).subscribe(response => {
-      console.log(response);
+      if (response.Status === 200) {
+        if (response.Data) {
+          const token = response.Data.id + response.Data.username;
+          localStorage.setItem('token', token);
+          this.mainservice.showToaster('Success', response.Message);
+          this.route.navigate(['/realEstate/Home']);
+          window.scrollTo(0, 0);
+        }
+      } else {
+        this.mainservice.showToaster('Error', response.Message);
+      }
     },
       (err) => {
         this.mainservice.HandleErrorMessages(err);
-      })
-    // this.route.navigate(['']);
-
+      });
   }
 
   Register() {
