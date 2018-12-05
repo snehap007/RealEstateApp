@@ -6,6 +6,7 @@ import { LandingComponent } from './layout/landing/landing.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AboutUSComponent } from './layout/about-us/about-us.component';
+import { LoginGuard } from './login.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/realEstate/Home', pathMatch: 'full' },
